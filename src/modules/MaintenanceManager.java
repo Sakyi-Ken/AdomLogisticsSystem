@@ -1,21 +1,17 @@
 package modules;
 
+import java.util.ArrayList;
+import java.util.List;
 import models.Maintenance;
 import models.Vehicle;
 import utils.FileHandler;
 import utils.InputValidator;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
 public class MaintenanceManager {
 
     private final List<Maintenance> allMaintenanceRecords = FileHandler.loadMaintenance(); // flat list
     private final List<Vehicle> sortedVehicleList = new ArrayList<>();
-    private final Scanner scanner = new Scanner(System.in);
+    // private final Scanner scanner = new Scanner(System.in);
 
     public MaintenanceManager(VehicleManager vehicleManager) {
         // Load vehicles and sort manually by mileage using QuickSort
