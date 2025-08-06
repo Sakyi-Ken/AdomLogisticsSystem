@@ -304,15 +304,18 @@ public class DeliveryManager {
             }
 
             switch (choice) {
-                case 1:
+                case 1 -> {
                     viewActiveDeliveries();
                     return;
-                case 2:
+                }
+                case 2 -> {
                     viewAllDeliveries();
                     return;
-                case 3:
+                }
+                case 3 -> {
                     viewDeliveriesByStatus();
                     return;
+                }
             }
         }
     }
