@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Vehicle {
-    private String registrationNumber;
-    private String type;           // e.g., "Truck" or "Van"
+
+    private final String registrationNumber;
+    private final String type;           // e.g., "Truck" or "Van"
     private int mileage;           // in kilometers
     private double fuelUsage;      // in liters per 100km
     private String driverId;       // ID of the assigned driver
-    private List<String> maintenanceHistory;
+    private final List<String> maintenanceHistory;
 
     // Constructor
     public Vehicle(String registrationNumber, String type, int mileage, double fuelUsage, String driverId) {
@@ -65,10 +66,10 @@ public class Vehicle {
     // String representation
     @Override
     public String toString() {
-        return "Vehicle [Reg No: " + registrationNumber +
-               ", Type: " + type +
-               ", Mileage: " + mileage + " km" +
-               ", Fuel Usage: " + fuelUsage + " L/100km" +
-               ", Driver ID: " + driverId + "]";
+        return "Vehicle [Reg No: " + registrationNumber
+                + ", Type: " + type
+                + ", Mileage: " + mileage + " km"
+                + ", Fuel Usage: " + fuelUsage + " L/100km"
+                + ", Driver ID: " + driverId + "]";
     }
 }
